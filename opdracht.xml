@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bookstore>
+  <book category="POGRAMING">
+    <klas>3.10.1</klas>
+    <naam>Java for dummies</naam>
+    <schrijver>Jimmy newton</schrijver>
+  </book>
+  <book category="MATH">
+    <klas>3.10.2</klas>
+    <naam>wiskunde</naam>
+    <schrijver>Daniels</schrijver>
+  </book>
+  <book category="BIO">
+    <klas>2.10.1</klas>
+    <naam>Voortplanting</naam>
+    <schrijver>Pria</schrijver>
+  </book>
+  <book category="WEB">
+   <klas>2.10.2</klas>
+    <naam>HTML for you</naam>
+    <schrijver>risk</schrijver>
+  </book>
+</bookstore>
