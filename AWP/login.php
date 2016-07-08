@@ -37,9 +37,9 @@
 		      <form class="form-login" action="includes/loginaction.php" method="post" name="login">
 		        <h2 class="form-login-heading">Sign in </h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="Username" name = "login_username" autofocus>
+		            <input type="text" class="form-control" placeholder="Username" name = "login_username" autofocus required>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password" name="login_password">
+		            <input type="password" class="form-control" placeholder="Password" name="login_password" required>
 		           <!--  <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>

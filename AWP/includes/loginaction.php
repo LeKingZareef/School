@@ -12,7 +12,9 @@ include '../core/init.php';
 		if ($count == "1") {
 			$_SESSION['login_username'] = $login_username;
 
-			header('location: ../index.html');
+			header('location: ../index.php');
+		} else {
+			header('location: ../login.php');
 		}
 	}
 	
