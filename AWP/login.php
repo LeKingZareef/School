@@ -34,10 +34,10 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="includes/loginaction.php">
+		      <form class="form-login" action="includes/loginaction.php" method="post" name="login">
 		        <h2 class="form-login-heading">Sign in </h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="User Name" name = "login_username" autofocus>
+		            <input type="text" class="form-control" placeholder="Username" name = "login_username" autofocus>
 		            <br>
 		            <input type="password" class="form-control" placeholder="Password" name="login_password">
 		           <!--  <label class="checkbox">
