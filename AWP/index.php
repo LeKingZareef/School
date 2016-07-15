@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <?php require 'includes/check.php';?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -45,7 +46,7 @@
            
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.php">Logout</a></li>
+                    <li><a class="logout" href="logout.php">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -61,7 +62,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
+              	  <h5 class="centered"><?php echo $_SESSION['login_username'];?></h5>
               	  	
                   <li class="mt">
                       <a class="active" href="index.php">

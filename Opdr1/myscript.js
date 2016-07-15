@@ -1,1 +1,1 @@
-alert("Hello World");
+swal("Hello World");

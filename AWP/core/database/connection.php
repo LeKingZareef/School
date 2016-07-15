@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=autowerkplaats_db", $username, $password);

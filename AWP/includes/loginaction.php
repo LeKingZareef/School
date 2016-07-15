@@ -11,8 +11,10 @@ include '../core/init.php';
 
 		if ($count == "1") {
 			$_SESSION['login_username'] = $login_username;
+			//$_SESSION['login_password'] = $login_password;
 
 			header('location: ../index.php');
+			session_start();
 		} else {
 			header('location: ../login.php');
 		}

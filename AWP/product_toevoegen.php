@@ -1,7 +1,7 @@
+<?php include 'core/init.php';?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -23,6 +23,10 @@
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
     <script src="assets/js/chart-master/Chart.js"></script>
+
+    <link rel="stylesheet" href="assets/css/material.min.css">
+    <script src="assets/js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -62,26 +66,27 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
-              	  	
+                  <h5 class="centered"><?php echo $_SESSION['login_username'];?></h5>
+                    
                   <li class="mt">
-                      <a  href="index.php">
+                      <a class="active" href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
+                          <!-- Accent-colored raised button with ripple -->
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="nieuw_factuur.php" >
+                      <a href="product_toevoegen.php" >
                           <i class="fa fa-desktop"></i>
-                          <span>Nieuwe Product</span>
+                          <span>Nieuwe product</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
-                          <span>Product Bewerken</span>
+                          <span>Product Wijzigen</span>
                       </a>
                       
                   </li>
@@ -121,41 +126,43 @@
                         <br>
                               <label class="col-sm-2 col-sm-2 control-label">Product</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control " name="klantnaam">
+                                  <input type="text" class="form-control " name="product_name">
                               </div>
                           </div>
                            <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label">Product-nummer </label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="telefoon">
+                                  <input type="text" class="form-control" name="product_number">
                               </div>
                           </div>
                             <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label"> Product Merk</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="werknemer" >
+                                  <input type="text" class="form-control" name="product_merk" >
                               </div>
                           </div>
                           <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label"> Aantal</label>
                               <div class="col-sm-10">
-                                  <input type="number" class="form-control" name="gew_man">
+                                  <input type="number" class="form-control" name="product_aantal">
                               </div>
                           </div>
                         <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label">Product Omschrijving</label>
                               <div class="col-sm-10">
-                                  <textarea type="number" class="form-control" name="uit_werk"> </textarea> 
+                                  <textarea type="number" class="form-control" name="product_omschrijving"> </textarea> 
                               </div>
                           </div> 
                           <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label"> Prijs</label>
                               <div class="col-sm-10">
-                                  <input name="prijs" type="number" class="form-control">
+                                  <input name="product_price" type="number" class="form-control">
                               </div>
                           </div> 
                          <div class="form-group">  
-                    <input type="submit" value="Opslaan" name="add" class="btn btn-theme text-center pull-right" style="margin-right: 14px;">
+                        <input type="submit" value="Opslaan" name="add" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin:10px;">
+                    <!-- Accent-colored raised button with ripple -->
+
                  </div>
                       </form>
                   </div>
