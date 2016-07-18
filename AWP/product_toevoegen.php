@@ -69,7 +69,7 @@
                   <h5 class="centered"><?php echo $_SESSION['login_username'];?></h5>
                     
                   <li class="mt">
-                      <a class="active" href="index.php">
+                      <a  href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
                           <!-- Accent-colored raised button with ripple -->
@@ -77,7 +77,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="product_toevoegen.php" >
+                      <a class="active" href="product_toevoegen.php" >
                           <i class="fa fa-desktop"></i>
                           <span>Nieuwe product</span>
                       </a>
@@ -91,9 +91,9 @@
                       
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="product_history.php" >
                           <i class="fa fa-book"></i>
-                          <span>Geschiedenis</span>
+                          <span>Alle Producten</span>
                       </a>
                      
                   </li>
@@ -160,7 +160,7 @@
                               </div>
                           </div> 
                          <div class="form-group">  
-                        <input type="submit" value="Opslaan" name="add" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin:10px;">
+                        <input type="submit" value="Opslaan" name="add" class="btn btn-info" style="margin:10px;">
                     <!-- Accent-colored raised button with ripple -->
 
                  </div>
