@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php //require 'includes/check.php';?>
+    <?php 
+      include 'core/init.php';
+      include 'includes/check.php';
+    ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -79,7 +82,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="product_edit.php"
                           <i class="fa fa-cogs"></i>
                           <span>Product Wijzigen</span>
                       </a>
@@ -92,10 +95,6 @@
                       </a>
                      
                   </li>
-                 
-                 
-               
-
               </ul>
               <!-- sidebar menu end-->
           </div>

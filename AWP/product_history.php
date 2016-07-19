@@ -63,9 +63,9 @@
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
+               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
+                  <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
                   <h5 class="centered"><?php echo $_SESSION['login_username'];?></h5>
                     
                   <li class="mt">
@@ -84,23 +84,19 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="product_edit.php" >
                           <i class="fa fa-cogs"></i>
                           <span>Product Wijzigen</span>
                       </a>
                       
                   </li>
-                  <li class="sub-menu">
-                      <a class="active"  href="javascript:;" >
+                  <li class="active" class="sub-menu">
+                      <a   href="product_history.php" >
                           <i class="fa fa-book"></i>
                           <span>Alle Producten</span>
                       </a>
                      
                   </li>
-                 
-                 
-               
-
               </ul>
               <!-- sidebar menu end-->
           </div>
