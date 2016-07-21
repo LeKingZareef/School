@@ -183,15 +183,26 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Aantal toevoegen</h4>
+                    <h4 class="modal-title" id="myModalLabel">Delete Product</h4>
                   </div>
                   <div class="modal-body">
-                    Aantal toevoegen
+                     <form class="form-horizontal style-form" action="includes/product_delete.php" method="post" name="aantal_toevoegen">
+                          <div class="form-group">
+                        <br>
+                              <label class="col-sm-2 col-sm-2 control-label">Product-Nummer</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control " name="product_number">
+                              </div>
+                          </div>
+                           <div class="form-group">
+                    <!-- Accent-colored raised button with ripple -->
+                 </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>              
