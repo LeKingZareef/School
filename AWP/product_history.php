@@ -131,7 +131,7 @@
                               </thead>
                               <tbody>
                                 <?php
-                                $sql = 'SELECT * FROM product';
+                                $sql = 'SELECT * FROM product ORDER BY product_nameg';
                                 
                                 foreach ($conn->query($sql) as $row) {
                                     $product_name = $row['product_name'];
