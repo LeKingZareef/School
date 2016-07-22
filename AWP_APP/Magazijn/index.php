@@ -50,6 +50,7 @@
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
                     <li><a class="logout" href="../logout.php">Logout</a></li>
+                      <a href="../index.php"> <img src="../ICONS/home.png"  class="pull-left"></img> </a>
             	</ul>
             </div>
         </header>

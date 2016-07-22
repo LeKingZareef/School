@@ -6,62 +6,64 @@
 include 'config.php';
 
 if (isset($_POST["add"])) {
-	
-    if(isset($_POST["keuring_id"]) && !empty($_POST["keuring_id"]) &&
+    if(
       	isset($_POST["keuring_kentken"]) && !empty($_POST["keuring_kentken"]) &&
 		isset($_POST["keuring_chasisnummer"]) && !empty($_POST["keuring_chasisnummer"]) &&
 		isset($_POST["keuring_model"]) && !empty($_POST["keuring_model"]) &&
-    	isset($_POST["keuring_merk"]) && !empty($_POST["keuring_merk"]) &&
-    	isset($_POST["keuring_datum"]) && !empty($_POST["keuring_datum"]) &&
-    	isset($_POST["keuring_vervaldatum"]) && !empty($_POST["keuring_vervaldatum"])){
+    	isset($_POST["keuring_merk"]) && !empty($_POST["keuring_merk"]) 
+    	
+        ){
             
-            $keuring_id=$_POST["keuring_id"];
+       
             $keuring_kentken=$_POST["keuring_kentken"];
             $keuring_chasisnummer=$_POST["keuring_chasisnummer"];
             $keuring_model=$_POST["keuring_model"];
             $keuring_merk=$_POST["keuring_merk"];
             $keuring_datum=$_POST["keuring_datum"];
-            $keuring_vervaldatum=$_POST["keuring_vervaldatum"];
 
-//             echo $naam_form ; 
-//             echo $voornaam_form;
-//             echo $straatnaam_form ;
-//             echo $telefoonnumer_form;
-//             $sql = "INSERT INTO sleepdienst (auto, kenteken_nr, category, kosten, sleepplaats, opslagplaats, Status)
-//             VALUES ('$auto', '$kenteken_nr', '$category', '$kosten', '$sleepplaats', '$opslagplaats', '$status')";
+            //$newEndingDate = $keuring_datum + "365 day" ;
+            $newEndingDate = date('Y-m-d', strtotime('+1 years')); 
+
+            ///$newEndingDate=date('Y-m-d', strtotime('+1 year', strtotime($startDate)) );
+            // $newEndingDate = date("Y-m-d", strtotime(date("Y-m-d", strtotime($StaringDate)) . " + 1 year"));
+            // $newEndingDate = date("Y-m-d", strtotime(date("Y-m-d", strtotime($StaringDate)) . " + 365 day"));
+            // $newEndingDate = date("Y-m-d", strtotime(date("Y-m-d", strtotime($StaringDate)) . " + 365 day"));
+
+            $sql = "INSERT INTO keuring ( keuring_kenteken, keuring_chasisnummer, keuring_model, keuring_merk, keuring_datum, keuring_vervaldatum)
+          VALUES ( '$keuring_kentken', '$keuring_chasisnummer', '$keuring_model', '$keuring_merk', '$keuring_datum', '$newEndingDate')";
  
 			
 		
-//              if ($conn->query($sql) === TRUE) {
-//                //echo " ";
-// 			   	 ?>
-//                  <script>
-//       swal(
-//   'Success!',
-//   'Sucessvol opgeslagen',
-//   'success'
-// )
-//         </script>                 
-//                  <?php
+            if ($conn->query($sql) === TRUE) {
+                          //echo " ";
+ 			   	 ?>
+                 <script>
+       swal(
+  'Success!',
+  'Sucessvol opgeslagen',
+   'success'
+ )
+        </script>                 
+                 <?php
 			
-//              }else{
-//                     echo "Error: " . $sql . "<br>" . $conn->error;
-//                 }
+             }else{
+                   echo "Error: " . $sql . "<br>" . $conn->error;
+               }
 
-//     }else {
-//         ?>
-//         <script>
-//           swal(
-//   'Let op !',
-//   'Vul alle velden in',
-//   'warning'
-// )
-//                   </script>
-//         <?php
-//     }//lege velden else
+   }else {
+        ?>
+       <script>
+          swal(
+  'Let op !',
+  'Vul alle velden in',
+     'warning'
+ )
+                  </script>
+        <?php
+   }//lege velden else
    
-// }else{
-// 	// echo "druk submit";
-// }
-// $conn->close();
-// ?>
+    }else{
+	// echo "druk submit";
+ }
+ $conn->close();
+ ?>

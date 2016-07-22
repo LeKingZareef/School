@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'assets/includes/config.php';?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -25,13 +24,6 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
-    <script src="sleepdienst/assets/js/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sleepdienst/assets/css/sweetalert2.min.css">
-
-
-
-
-
     <script src="assets/js/chart-master/Chart.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -51,13 +43,14 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Sleepdienst</b></a>
+            <a href="index.php" class="logo"><b>Sleepdienst</b></a>
             <!--logo end-->
            
             <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
-            	</ul>
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../logout.php">Logout</a></li>
+                    <a href="../index.php"> <img src="../ICONS/home.png"  class="pull-left"></img> </a>
+              </ul>
             </div>
         </header>
       <!--header end-->
@@ -71,11 +64,10 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered"><?php echo $_SESSION['login_username']; ?></h5>
-              	  	
-                   <li class="mt">
-                      <a  href="index.php">
+                  <p class="centered"><a href="profile.html"><img src="assets/img/sleepdienst.png" class="img-circle" width="60"></a></p>
+                  <h5 class="centered"><?php echo $_SESSION['login_username']; ?></h5>
+                  <li class="mt">
+                      <a href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
                       </a>
@@ -89,15 +81,14 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a  href="voertuig_ophalen.php" >
+                      <a href="voertuig_ophalen.php" >
                           <i class="fa fa-cogs"></i>
                           <span>Voertuig ophalen</span>
                       </a>
                       
                   </li>
                   <li class="sub-menu">
-                  <a href="Gesleeptevoertuigen.php" />
-                    
+                      <a href="Gesleeptevoertuigen.php" >
                           <i class="fa fa-book"></i>
                           <span>Gesleepte voertuigen</span>
                       </a>

@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <?php include 'assets/includes/config.php';?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -44,24 +43,14 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Autowerkplaats</b></a>
+            <a href="index.php" class="logo"><b>Sleepdienst</b></a>
             <!--logo end-->
            
             <div class="top-menu">
-            <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../logout.php">Logout</a></li>
+                    <a href="../index.php"> <img src="../ICONS/home.png"  class="pull-left"></img> </a>
               </ul>
-             <div class="col-md-4 pull-right" style="margin-top:16px;">
-              <?php //include 'assets/includes/zoeken.php';?>
-              <form class="form-horizontal style-form" role="form" method="post" >
-                <div class="input-group">
-                  <span class="input-group-btn">
-                    <input type="submit" name="zoek" class="btn btn-theme "  style="border: 2px solid #fff !important; padding-bottom: 5px;" value="Zoeken!"></span>
-                    <input type="text" class="form-control" placeholder="Kenteken" name="kenteken">
-                </div>
-               </form>
-             </div>
-              
             </div>
         </header>
       <!--header end-->
@@ -75,24 +64,24 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-                  <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
+                  <p class="centered"><a href="profile.html"><img src="assets/img/sleepdienst.png" class="img-circle" width="60"></a></p>
                   <h5 class="centered"><?php echo $_SESSION['login_username']; ?></h5>
                     
-                         <li class="mt">
-                      <a  href="index.php">
+                  <li class="mt">
+                      <a href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a  href="nieuw_auto.php" >
+                      <a href="nieuw_auto.php" >
                           <i class="fa fa-desktop"></i>
                           <span>Nieuwe voertuig</span>
                       </a>
                   </li>
 
-                  <li class="sub-menu">
+                  <li  class="sub-menu">
                       <a class="active" href="voertuig_ophalen.php" >
                           <i class="fa fa-cogs"></i>
                           <span>Voertuig ophalen</span>
@@ -100,16 +89,16 @@
                       
                   </li>
                   <li class="sub-menu">
-                  <a  href="Gesleeptevoertuigen.php"/>
-                      
+                      <a href="Gesleeptevoertuigen.php" >
                           <i class="fa fa-book"></i>
                           <span>Gesleepte voertuigen</span>
                       </a>
                      
                   </li>
+                 
+                 
+               
 
-                
-    
               </ul>
               <!-- sidebar menu end-->
           </div>

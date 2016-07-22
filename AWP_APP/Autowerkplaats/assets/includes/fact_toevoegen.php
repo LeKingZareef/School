@@ -51,6 +51,9 @@ if (isset($_POST["add"])) {
                     'Factuur Opgeslagen en uitgeprint.',
                     'success'
                   )
+
+                  window.location = "index.php";
+
                  </script>                 
                  <?php
              }else{

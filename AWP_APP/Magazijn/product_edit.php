@@ -54,6 +54,7 @@
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login.html">Logout</a></li>
+                      <a href="../index.php"> <img src="../ICONS/home.png"  class="pull-left"></img> </a>
             	</ul>
             </div>
         </header>
@@ -86,8 +87,8 @@
                       </a>
                   </li>
 
-                  <li class="active" class="sub-menu">
-                      <a href="product_edit.php" >
+                  <li  class="sub-menu">
+                      <a href="product_edit.php" class="active">
                           <i class="fa fa-cogs"></i>
                           <span>Product Wijzigen</span>
                       </a>

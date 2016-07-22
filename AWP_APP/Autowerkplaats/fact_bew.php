@@ -50,6 +50,7 @@
             <div class="top-menu">
             <ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login.html">Logout</a></li>
+                     <a href="../index.php"> <img src="../ICONS/home.png"  class="pull-left"></img> </a>
               </ul>
              <div class="col-md-4 pull-right" style="margin-top:16px;">
            <?php //include 'assets/includes/zoeken.php'; ?>

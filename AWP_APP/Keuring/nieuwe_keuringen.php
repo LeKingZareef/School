@@ -41,69 +41,68 @@
       <!--header start-->
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation">
-                  </div>
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
             <a href="index.html" class="logo"><b>Keuringsdienst</b></a>
             <!--logo end-->
            
             <div class="top-menu">
+
               <ul class="nav pull-right top-menu">
+
                     <li><a class="logout" href="login.html">Logout</a></li>
+                   <a href="../index.php"> <img src="assets/ICONS/home.png"  class="pull-left"></img> </a>
+
               </ul>
             </div>
-      </header>
-        <!--header end-->
+        </header>
+      <!--header end-->
       
-       <!-- **********************************************************************************************************************************************************
-       MAIN SIDEBAR MENU
-       *********************************************************************************************************************************************************** -->
-       <!--sidebar start-->
-        <aside>
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
                   <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
-                  <h5 class="centered"><?php echo $_SESSION['login_username']; ?></h5>
+                  <h5 class="centered"><?php echo $_SESSION['login_username'];?></h5>
                     
                   <li class="mt">
-                      <a  href="index.php">
+                      <a  href="index.php" >
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
                       </a>
                   </li>
 
                  <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="overzicht.php"  >
                    <i class="fa fa-bars" aria-hidden="true"></i>
                           <span>Overzicht gekeurde voertuigen</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="verval_keuring.php" >
                      <i class="fa fa-tasks" aria-hidden="true"></i>
                           <span>Binnenkort verlegen</span>
                       </a>
                       
                   </li>
                   <li class="sub-menu">
-                      <a href="nieuwe_keuringen.php" >
+                      <a href="nieuwe_keuringen.php" class="active">
                           <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
                           <span>Nieuwe keuringen</span>
                       </a>
                      
                   </li>
-                 
-                 
-               
-
               </ul>
               <!-- sidebar menu end-->
           </div>
-        </aside>
+      </aside>
       <!--sidebar end-->
       
       <!-- **********************************************************************************************************************************************************
@@ -115,25 +114,18 @@
           <section class="wrapper">
               <div class="col-lg-12">
                 <div class="form-panel">
-                       <form class="form-horizontal style-form" role="form" action="assets/includes/new_keuring.php" method="POST" name="keuring">
+                <?php include 'assets/includes/new_keuring.php'; ?>
+                       <form class="form-horizontal style-form" role="form"  method="POST">
                           <div class="form-group">
                         <h2  class="text-center"> Nieuwe Keuringen: </h2>
                         <br>
-                             <!--  <label class="col-sm-2 col-sm-2 control-label"><p class="fa fa-user"></p> KLant</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control " name="klant" readonly>
-                              </div> -->
+                           
                           </div>
-                          <div class="form-group">
-                           <label class="col-sm-2 col-sm-2 control-label"> <i class="fa fa-phone-square "> </i>  Keuring nummer </label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="keuring_id">
-                              </div>
-                          </div>
+                          
                            <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label"> <i class="fa fa-phone-square "> </i>  Auto Kenteken </label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="keuring_kenteken">
+                                  <input type="text" class="form-control" name="keuring_kentken">
                               </div>
                           </div>
                             <div class="form-group">
@@ -157,14 +149,13 @@
                         <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label"> <i class="fa fa-text-width"> </i> Keuring Datum</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="keuring_datum"> </input> 
+                                  <input type="text" class="form-control" name="keuring_datum" value="<?php
+                                   echo "" . date("Y/m/d") 
+                                   ?>
+                                   " > </input> 
                               </div>
                           </div> 
-                          <div class="form-group">
-                           <label class="col-sm-2 col-sm-2 control-label"> <i class="fa fa-text-width"> </i> Keuring Vervaldatum</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="keuring_vervaldatum"> </input> 
-                              </div>
+                          
                           </div> 
                         
                           </div> 
@@ -178,10 +169,7 @@
                    <!-- /.container-fluid -->
 
                      <!-- /.footer buttons --> 
-                    <div class="col-lg-12">
-                      <a title="Print Screen" alt="Print Screen" onclick="window.print();" target="_blank" style="cursor:pointer;"><button type="button" class="btn  btn-primary">Print</button></a>
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
+                 
           </section>
       </section>
 

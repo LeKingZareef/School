@@ -48,8 +48,12 @@
             <!--logo end-->
            
             <div class="top-menu">
+
               <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="../logout.php">Logout</a></li>
+
+                    <li><a class="logout" href="login.html">Logout</a></li>
+                   <a href="../index.php"> <img src="assets/ICONS/home.png"  class="pull-left"></img> </a>
+
               </ul>
             </div>
         </header>
@@ -65,24 +69,24 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
                   <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
-                  <h5 class="centered"><?php echo $_SESSION['login_username']; ?></h5>
+                  <h5 class="centered"><?php echo $_SESSION['login_username'];?></h5>
                     
                   <li class="mt">
-                      <a  href="index.php">
+                      <a  href="index.php" class="active">
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
                       </a>
                   </li>
 
                  <li class="sub-menu">
-                      <a href="overzicht.php" >
+                      <a href="overzicht.php"  >
                    <i class="fa fa-bars" aria-hidden="true"></i>
                           <span>Overzicht gekeurde voertuigen</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="verval_keuring.php" >
                      <i class="fa fa-tasks" aria-hidden="true"></i>
                           <span>Binnenkort verlegen</span>
                       </a>
@@ -108,12 +112,32 @@
 
       <section id="main-content">
           <section class="wrapper">
+
+             <div class="row">
+              <div class="col-md-4">  </div>
+<div class="col-md-4"> 
+
+           <div class="text-center" style="margin-top:90px; margin-left:-90px;"  > 
+              <h1 style="color:#23b8d0; "> <strong>Keuring </strong> </h1>
+              </div>
+              <div class="col-md-4"> </div>
+              <img src="assets/ICONS/keuringdienst.png">
+              </div>  
+
+    
+              </div><! --/row -->
           </section>
       </section>
 
       <!--main content end-->
       <!--footer start-->
-      <footer class="site-footer">
+         <footer class="site-footer" style="    width: 100%;
+    background: #23b8d0;
+    color: #fff;
+    padding: 10px 0;
+    z-index: -1 ;
+    bottom: 0 ;
+    position: absolute;">
           <div class="text-center">
               2016 - NATIN MBO
               <a href="index.php#" class="go-top">

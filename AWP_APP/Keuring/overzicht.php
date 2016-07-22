@@ -1,8 +1,6 @@
-<?php
-include 'assets/includes/config.php';
-include '../core/init.php';
-?>
-
+ <?php include 'assets/includes/config.php';
+ //include '../core/init.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,8 +48,12 @@ include '../core/init.php';
             <!--logo end-->
            
             <div class="top-menu">
+
               <ul class="nav pull-right top-menu">
+
                     <li><a class="logout" href="login.html">Logout</a></li>
+                   <a href="../index.php"> <img src="assets/ICONS/home.png"  class="pull-left"></img> </a>
+
               </ul>
             </div>
         </header>
@@ -67,7 +69,7 @@ include '../core/init.php';
               <ul class="sidebar-menu" id="nav-accordion">
               
                   <p class="centered"><a href="profile.html"><img src="assets/img/apw.png" class="img-circle" width="60"></a></p>
-                  <h5 class="centered"><?php echo $_SESSION['login_username']; ?></h5>
+                  <h5 class="centered"><?php //echo $_SESSION['login_username'];?></h5>
                     
                   <li class="mt">
                       <a  href="index.php">
@@ -77,14 +79,14 @@ include '../core/init.php';
                   </li>
 
                  <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="overzicht.php" class="active" >
                    <i class="fa fa-bars" aria-hidden="true"></i>
                           <span>Overzicht gekeurde voertuigen</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="verval_keuring.php" >
                      <i class="fa fa-tasks" aria-hidden="true"></i>
                           <span>Binnenkort verlegen</span>
                       </a>
@@ -112,9 +114,11 @@ include '../core/init.php';
           <section class="wrapper">
             <div class="col-md-12">
                         <div class="content-panel">
-                            <h4><i class="fa fa-angle-right"></i> Overzicht</h4>
+                        <table class="table table-striped table-advance table-hover">
+                            <h2 class="text-center"> <b>Overzicht Gekeurde Voertuigen </b></h2>
+
                             <hr>
-                          <table class="table">
+                          
                               <thead>
                               <tr>
                                   <th>#</th>
@@ -128,7 +132,7 @@ include '../core/init.php';
                               </thead>
                               <tbody>
                               <?php 
-                                $sql = "SELECT * FROM keuring";
+                                $sql = "SELECT * FROM keuring ORDER BY keuring_datum";
 
                                 $result = $conn->query($sql);
                                 if ($result->num_rows > 0) {
@@ -164,7 +168,13 @@ include '../core/init.php';
 
       <!--main content end-->
       <!--footer start-->
-      <footer class="site-footer">
+      <footer class="site-footer" style="    width: 100%;
+    background: #23b8d0;
+    color: #fff;
+    padding: 10px 0;
+    z-index: -1 ;
+    bottom: 0 ;
+    position: absolute;">
           <div class="text-center">
               2016 - NATIN MBO
               <a href="index.php#" class="go-top">

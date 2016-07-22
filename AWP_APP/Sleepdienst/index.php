@@ -49,6 +49,7 @@
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
                     <li><a class="logout" href="../logout.php">Logout</a></li>
+                    <a href="../index.php"> <img src="../ICONS/home.png"  class="pull-left"></img> </a>
             	</ul>
             </div>
         </header>
@@ -88,7 +89,7 @@
                       
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="Gesleeptevoertuigen.php" >
                           <i class="fa fa-book"></i>
                           <span>Gesleepte voertuigen</span>
                       </a>
