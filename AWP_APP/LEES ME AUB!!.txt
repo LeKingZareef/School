@@ -1,0 +1,18 @@
+Installatie Auto werk plaats:
+
+1. Import database (autowerkplaats_db.sql) in PhpMyAdmin
+2. Extract .zip en plaats folder in c:/wamp/www/
+3. Verander server gegevens in surinamevandaag/config.php:
+	lijn 5: define("USER", "<uw username>");
+	lijn 6: define("PASSWORD", "<uw wachtwoord>");
+4. U bent klaar om te testen, alleen nog de inlog gegevens.
+
+Dashboard inlog gegevens:
+Gebruikersnaam 	: Zareef
+Wachtwoord 	: password
+
+Veel plezier!!
+
+Namens,
+Team GT-R
+Dheeradj, Channiele, Akash en Zareef

@@ -55,6 +55,16 @@
                    <a href="../index.php"> <img src="assets/ICONS/home.png"  class="pull-left"></img> </a>
 
               </ul>
+               <div class="col-md-4 pull-right" style="margin-top:16px;">
+           <?php //include 'assets/includes/zoeken.php'; ?>
+           <form class="form-horizontal style-form" role="form" method="post" >
+            <div class="input-group">
+              <span class="input-group-btn">
+                <input type="submit" name="zoek" class="btn btn-theme "  style="border: 2px solid #fff !important; padding-bottom: 5px;" value="Zoeken!"></span>
+                <input type="text" class="form-control" placeholder="Kenteken-Nummer" name="bon">
+            </div>
+           </form>
+          </div>
             </div>
         </header>
       <!--header end-->

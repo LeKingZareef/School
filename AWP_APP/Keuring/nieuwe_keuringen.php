@@ -175,7 +175,13 @@
 
       <!--main content end-->
       <!--footer start-->
-      <footer class="site-footer">
+     <footer class="site-footer" style="    width: 100%;
+    background: #23b8d0;
+    color: #fff;
+    padding: 10px 0;
+    z-index: -1 ;
+    bottom: 0 ;
+    position: absolute;">
           <div class="text-center">
               2016 - NATIN MBO
               <a href="index.php#" class="go-top">

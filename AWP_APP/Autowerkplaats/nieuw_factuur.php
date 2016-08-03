@@ -174,11 +174,11 @@
                           </div> 
                           <div class="form-group">
                            <label class="col-sm-2 col-sm-2 control-label"><i class="fa fa-money"> </i> Prijs</label>
-                              <div class="col-sm-5">
+                              <div class="col-sm-4">
                                   <input name="prijs" type="number" class="form-control">
                               </div>
                               <label class="col-sm-1 col-sm-1 control-label"><i class="fa fa-money"> </i> Koers</label>
-                              <div class="col-sm-4">
+                              <div class="col-sm-5">
                                   <input name="koers" type="number" class="form-control">
                               </div>
                           </div> 

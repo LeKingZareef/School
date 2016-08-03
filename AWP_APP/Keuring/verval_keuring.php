@@ -127,7 +127,7 @@
                                   <th>model</th>
                                   <th>Merk</th>
                                   <th>Keuring vervalt op</th>
-                                  <th>3 Maanden voor vervaldatum</th>
+                                  <th>Aantal maanden nog</th>
                               </tr>
                               </thead>
                               <tbody>
@@ -146,7 +146,7 @@
                                     $keuring_vervaldatum = $row['keuring_vervaldatum'];
 
                                
-                                    $keuring_soon = Date("Y-m-d", strtotime("$keuring_vervaldatum -9 month"));
+                                    $keuring_soon = Date("m", strtotime("$keuring_vervaldatum -7 month"));
                                     echo "
                                     <tr>
 

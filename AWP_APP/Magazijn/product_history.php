@@ -45,7 +45,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Autowerkplaats</b></a>
+            <a href="index.html" class="logo"><b>Magazijn</b></a>
             <!--logo end-->
            
             <div class="top-menu">
@@ -163,7 +163,13 @@
 
       <!--main content end-->
       <!--footer start-->
-      <footer class="site-footer">
+      <footer class="site-footer" style="    width: 100%;
+    background: #23b8d0;
+    color: #fff;
+    padding: 10px 0;
+    z-index: -1 ;
+    bottom: 0 ;
+    position: absolute;">
           <div class="text-center">
               2016 - NATIN MBO
               <a href="index.php#" class="go-top">

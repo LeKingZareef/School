@@ -52,7 +52,7 @@ if (isset($_POST["add"])) {
                     'success'
                   )
 
-                  window.location = "index.php";
+                  window.location = "fact_bew.php";
 
                  </script>                 
                  <?php
