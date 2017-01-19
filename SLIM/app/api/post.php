@@ -75,3 +75,60 @@ $app->post('/api/post/add', function(Request $request, Response $response) {
         echo '{"error": {"text":'.$e->getMessage().'}}'; 
     }
 }); 
+
+//Update post 
+
+$app->put('/api/post/update/{id}', function(Request $request, Response $response) {
+    $id = $request->getAttribute('id');
+
+    $title = $request->getParam('title'); 
+    $categorie_id = $request->getParam('categorie_id'); 
+    $body = $request->getParam('body'); 
+
+    $sql = "UPDATE post SET title  = :title, categorie_id = :categorie_id, body = :body WHERE id = $id"; 
+
+    try {
+        //database object
+        $db = new db() ; 
+        //connect
+        $db = $db->connect();
+
+        $stmt = $db->prepare($sql); 
+
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':categorie_id', $categorie_id);
+        $stmt->bindParam(':body', $body);
+
+        $stmt->execute(); 
+        
+        echo '{"notice": {"text":"Post '.$id.' Updated"}}'; 
+        
+    }catch (PDOEception $e){
+        echo '{"error": {"text":'.$e->getMessage().'}}'; 
+    }
+}); 
+
+//Delete post 
+
+$app->delete('/api/post/delete/{id}', function(Request $request, Response $response) {
+    $id = $request->getAttribute('id');
+
+    $sql = "DELETE FROM post WHERE id = $id"; 
+
+    try {
+        //database object
+        $db = new db() ; 
+        //connect
+        $db = $db->connect();
+
+        $stmt = $db->prepare($sql); 
+
+        $stmt->execute(); 
+        $db = null; 
+        
+        echo '{"notice": {"text":"Post '.$id.' Deleted"}}'; 
+        
+    }catch (PDOEception $e){
+        echo '{"error": {"text":'.$e->getMessage().'}}'; 
+    }
+}); 
